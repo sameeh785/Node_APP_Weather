@@ -13,6 +13,7 @@ const hbs = require('hbs')
 const express = require ('express')
 
 const app = express()
+const port = process.env.PORT || 30000
  // path is mode module used for  string path manipulation
 const pathtopublic = path.join(__dirname,'../public')
 const partialpath = path.join(__dirname,'../template/partial')
@@ -188,7 +189,7 @@ app.get("*", (req,res) => {
     })
 })
 
-app.listen(3000, () => {
+app.listen(port , () => {
     console.log("SERVER IS up")
 
 })
